@@ -1,0 +1,58 @@
+<!doctype html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+<head><!--test-->
+    <meta charset="utf-8">
+    <title>cione</title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <base href="/">
+    <!--<link rel="stylesheet/less" href="bower_components/bootstrap/dist/css/bootstrap.css"/>-->
+    <!--<link rel="stylesheet" href="styles/main.css"/>-->
+
+    <!-- build:js(app) scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/scripts/module/cione1boardPack1.00.js"></script>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <script src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+
+    <script src="scripts/modules/angular-file-upload.min.js"></script>
+    <script src="scripts/modules/angular-file-upload-shim.js"></script>
+
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/bootstrap-theme.css">
+
+
+
+</head>
+<body ng-app="ymApp">
+
+<div class="container">
+    <div ng-view="contents"></div>
+</div>
+
+<!-- mobile bottom fixed menu, footer -->
+
+
+<script type="text/javascript">
+    if (navigator.userAgent.match(/IEMobile\/10\.0/)) {
+        var msViewportStyle = document.createElement("style")
+        msViewportStyle.appendChild(document.createTextNode("@-ms-viewport{width:auto!important}"))
+        document.getElementsByTagName("head")[0].appendChild(msViewportStyle)
+    }
+</script>
+</body>
+</html>
