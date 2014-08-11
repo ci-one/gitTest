@@ -15,17 +15,12 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(app) styles/vendor.css -->
-    <!-- bower:css -->
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css({.tmp,app}) styles/main.css -->
 
     <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="styles/common.css">
 
     <link rel="stylesheet" href="styles/bootstrap.min.css">
-    <link rel="stylesheet" href="styles/bootstrap-theme.min.css">
+    <!--   <link rel="stylesheet" href="styles/bootstrap-theme.min.css"> //-->
 
 
 
@@ -39,6 +34,16 @@
     <link rel="apple-touch-icon-precomposed" href="images/apple-touch-icon-57-precomposed.png">
     <link rel="shortcut icon" href="images/favicon.png">
 
+    <!--//For BoardPack //-->
+
+
+    <!--//For Managing Login Statue  //-->
+    <script type="text/javascript" src="scripts/controllers/accounts_temp.js"></script>
+    <script type="text/javascript" src="scripts/controllers/login_control.js"></script>
+    <script type="text/javascript" src="http://openapi.map.naver.com/openapi/naverMap.naver?ver=2.0&key=f383b8bea7f650b09c1ae2a715d4fd08"></script>
+
+
+
 </head>
 <body ng-app="mcApp" ng-controller="MainCtrl">
 <!--[if lt IE 7]>
@@ -50,14 +55,13 @@
 <script src="bower_components/es5-shim/es5-shim.js"></script>
 <script src="bower_components/json3/lib/json3.min.js"></script>
 <![endif]-->
-
 <header>
     <div ng-include="'/views/ymheader.html'"></div>
 </header>
 
-<content>
+<content class="col-xs-12 column">
     <!-- Add your site or application content here -->
-    <div class="container" ng-view="" style="border:solid; border-color: black"></div>
+        <div class="container" ng-view="" style="border:none; border-color: black"></div>
 </content>
 
 <footer>
@@ -86,12 +90,16 @@
 <script src="bower_components/angular-route/angular-route.js"></script>
 <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 <!-- endbower -->
+<script src="scripts/angular-file-upload.min.js"></script>
+<script src="scripts/angular-file-upload-shim.js"></script>
 <!-- endbuild -->
-
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
-<script src="/scripts/app.js"></script>
-<script src="/scripts/controllers/main.js"></script>
-<script src="/scripts/controllers/navbar.js"></script>
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/main.js"></script>
+<script src="scripts/controllers/navbar.js"></script>
+
+<!--
+<script src="scripts/service/boardService.js"></script> -->
 <!-- endbuild -->
 </body>
 </html>

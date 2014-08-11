@@ -1,12 +1,12 @@
+<script src="scripts/controllers/costomerQ.js"></script>
+
 <div class="container cont01">
     <div class="row clearfix">
 
         <div class="col-md-offset-1 col-md-10 column col-md-offset-1">
             <h3>
-                <a href="#"><img src="images/menu_icon_01.png">고객문의</a>
+                <a href=""><img src="images/menu_icon_01.png">고객문의</a>
             </h3>
-
-
             <div class="row clearfix">
                 <div class="container">
                     <div class="col-md-12 column">
@@ -20,9 +20,9 @@
 
                                         <div class="row clearfix"></div>
                                         <input type="text" placeholder="문의사항 제목을 적어주세요"
-                                               class="form-control" id="usedInputTitle"
+                                               class="form-control" ng-model="item.title"
                                                autofocus="autofocus"/>
-                                    </div>
+                                    </div><div>{{title}}</div>
                                 </div>
                             </div>
                             <div class="row clearfix">
@@ -35,7 +35,7 @@
 
                                             <div class="row clearfix"></div>
                                             <input type="text" placeholder="작성자 성함을 적어주세요"
-                                                   class="form-control myhalfinput" id=""/>
+                                                   class="form-control myhalfinput"  ng-model="item.writer"/>
                                         </div>
                                         <div class="form-group ">
                                             <label for="usedInputCompany">업체명</label>
@@ -44,10 +44,10 @@
 
                                             <div class="row clearfix"></div>
                                             <input type="text" placeholder="업체명을 적어주세요"
-                                                   class="form-control myhalfinput" id=""/>
+                                                   class="form-control myhalfinput"  ng-model="item.comp"/>
                                         </div>
                                     </div>
-                                    <div class="col-md-6 column visible-md visible-lg myhalf">
+                                    <div class="col-md-6 column visible-md visible-lg myhalf" style="right:-10px;">
                                         <div class="form-group">
                                             <label for="usedInputCall">연락처</label>
 
@@ -56,16 +56,18 @@
                                             <div class="row clearfix"></div>
                                             <input type="tel"
                                                    placeholder="연락처를 적어주세요. 적어주신 연락처로 연락드리겠습니다"
-                                                   class="form-control myhalfinput" id=""/>
+                                                   class="form-control myhalfinput"  ng-model="item.contact"/>
                                         </div>
 
                                         <div class="form-group">
                                             <label for="usedInputEmail">이메일</label>
+
                                             <p class="help-block" style="color: #ffffff"> a </p>
+
                                             <div class="row clearfix"></div>
                                             <input type="email"
                                                    placeholder="등록하시면 와이머신의 최신 홍보자료를 받으실 수 있습니다"
-                                                   class="form-control myhalfinput" id="usedInputEmail"/>
+                                                   class="form-control myhalfinput"  ng-model="item.email"/>
                                         </div>
                                     </div>
 
@@ -77,7 +79,7 @@
 
                                             <div class="row clearfix"></div>
                                             <input type="text" placeholder="작성자 성함을 적어주세요"
-                                                   class="form-control" id=""/>
+                                                   class="form-control"  ng-model="item.writer"/>
                                         </div>
                                         <div class="form-group ">
                                             <label for="usedInputCompany">업체명</label>
@@ -86,7 +88,7 @@
 
                                             <div class="row clearfix"></div>
                                             <input type="text" placeholder="업체명을 적어주세요"
-                                                   class="form-control" id=""/>
+                                                   class="form-control"  ng-model="item.comp"/>
                                         </div>
                                         <div class="form-group">
                                             <label for="usedInputCall">연락처</label>
@@ -96,7 +98,7 @@
                                             <div class="row clearfix"></div>
                                             <input type="tel"
                                                    placeholder="연락처를 적어주세요. 적어주신 연락처로 연락드리겠습니다"
-                                                   class="form-control" id=""/>
+                                                   class="form-control"  ng-model="item.contact"/>
                                         </div>
 
                                         <div class="form-group">
@@ -105,7 +107,7 @@
                                             <div class="row clearfix"></div>
                                             <input type="email"
                                                    placeholder="이메일을 등록하시면 와이머신의 최신 홍보자료를 받으실 수 있습니다"
-                                                   class="form-control" id="usedInputEmail"/>
+                                                   class="form-control"  ng-model="item.email"/>
                                         </div>
                                     </div>
                                 </div>
@@ -119,17 +121,18 @@
                                         <p class="help-block">*필수 항목입니다</p>
 
                                         <div class="row clearfix"></div>
-                                        <textarea rows="10" cols="" class="form-control" id="usedInputContent"
+                                        <textarea rows="10" cols="" class="form-control"  ng-model="item.content"
                                                   placeholder="문의사항을 적어주세요"></textarea>
                                     </div>
                                 </div>
                             </div>
                             <div class="mywidth">
-                                <button type="submit" class="btn btn-primary pull-right">등 록</button>
+                                    <button type="button" class="btn btn-primary pull-right" ng-click="insertProcess(item)">등 록</button>
                             </div>
                         </form>
-
+                        <div ng-if="role">
                         <a href="#ym/request/new/list" class="btn btn-primary pull-right">목록보기</a>
+                            </div>
                     </div>
                 </div>
             </div>
